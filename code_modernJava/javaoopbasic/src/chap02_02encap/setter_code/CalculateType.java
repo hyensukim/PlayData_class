@@ -1,4 +1,5 @@
-package chap01_04enum.adv;
+package chap02_02encap.setter_code;
+
 import java.util.function.BiFunction;
 
 public enum CalculateType {
@@ -26,3 +27,4 @@ public enum CalculateType {
         return this.expression.apply(num1, num2);
     }
 }
+
