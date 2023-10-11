@@ -6,3 +6,9 @@
 
 * Day01 [[MSA 강의 1일차 - Modern Java](https://velog.io/@hyensukim/MSA-%EA%B0%95%EC%9D%98-1%EC%9D%BC%EC%B0%A8-Modern-Java "1일차 링크")]
 * SOLID 5대 원칙 [[객체지향 개발 SOLID 5대 원칙](https://velog.io/@hyensukim/%EA%B0%9D%EC%B2%B4%EC%A7%80%ED%96%A5-%EA%B0%9C%EB%B0%9C-SOLID-5%EB%8C%80-%EC%9B%90%EC%B9%99 "1일차 추가 공부")]
+* Day02[[MSA 강의 2일차 - Modern Java](https://velog.io/@hyensukim/MSA-2%EC%9D%BC%EC%B0%A8-Chap01.-Modern-Java)]
+
+
+# 2. 실질적인 객체지향 코드 작성하기
+
+- Day02[[MSA 강의 2일차 - 실질적인 객체지향 코드 작성하기](https://velog.io/@hyensukim/MSA-2%EC%9D%BC%EC%B0%A8-Chap02.-%EC%8B%A4%EC%A7%88%EC%A0%81%EC%9D%B8-%EA%B0%9D%EC%B2%B4%EC%A7%80%ED%96%A5-%EC%BD%94%EB%93%9C-%EC%9E%91%EC%84%B1%ED%95%98%EA%B8%B0)]
