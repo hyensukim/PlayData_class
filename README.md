@@ -22,15 +22,15 @@
 ### 4. 디자인 패턴
 
 - Day03[[MSA 강의 3일차 - 디자인 패턴](https://velog.io/@hyensukim/MSA-3%EC%9D%BC%EC%B0%A8-Chap04.-%EB%94%94%EC%9E%90%EC%9D%B8-%ED%8C%A8%ED%84%B4)]
-- Day04[MSA 강의 4일차 - 디자인 패턴]
+- Day04[[MSA 강의 4일차 - 디자인 패턴](https://velog.io/@hyensukim/MSA-4%EC%9D%BC%EC%B0%A8-Chap04.-%EB%94%94%EC%9E%90%EC%9D%B8-%ED%8C%A8%ED%84%B4)]
 
 ## 🌟 MSA 기본 개념 및 Spring Cloud
 
 ### 1. MSA 기본 개념
 
-- Day04[MSA 강의 4일차 - MSA 기본개념]
+- Day04[[MSA 강의 4일차 - MSA 기본개념](https://velog.io/@hyensukim/MSA-4%EC%9D%BC%EC%B0%A8-Chap01.-MSA-%EA%B8%B0%EC%B4%88)]
 
 ### 2. Spring Cloud Gateway
 
-- Day04[MSA 강의 4일차 - Spring Cloud]
-- Day05[MSA 강의 5일차 - Spring Cloud]
+- Day04[[MSA 강의 4일차 - Spring Cloud](https://velog.io/@hyensukim/MSA-4%EC%9D%BC%EC%B0%A8-Chap02.-Spring-Cloud)]
+- Day05[[MSA 강의 5일차 - Spring Cloud](https://velog.io/@hyensukim/MSA-5%EC%9D%BC%EC%B0%A8-Chap02.-Spring-Cloud-Gateway)]
