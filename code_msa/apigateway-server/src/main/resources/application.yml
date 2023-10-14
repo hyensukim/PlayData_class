@@ -1,10 +1,11 @@
 server:
   port: 8000
 
+
+spring:
+  application:
+    name: apigateway-service
 # 라우터 및 필터 yml 파일로 설정
-#spring:
-#  application:
-#    name: apigateway-service
 #  cloud:
 #    gateway:
 #      routes:
@@ -28,7 +29,3 @@ server:
 #            message: Global Filter Default Message
 #            pre: true
 #            post: true
-
-
-
-
