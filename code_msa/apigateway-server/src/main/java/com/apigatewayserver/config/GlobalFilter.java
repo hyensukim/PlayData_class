@@ -25,7 +25,7 @@ public class GlobalFilter extends AbstractGatewayFilterFactory<GlobalFilter.Conf
             System.out.println("global filter default message : " + config.getMessage());
 
             if(config.isPre()){
-//                log.info("global pre filter : " + req.getId());
+                System.out.println("global pre filter : " + req.getId());
             }
 
             return chain.filter(exchange).then(Mono.fromRunnable(()->{
