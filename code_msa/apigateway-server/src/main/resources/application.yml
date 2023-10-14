@@ -6,8 +6,8 @@ spring:
   application:
     name: apigateway-service
 # 라우터 및 필터 yml 파일로 설정
-#  cloud:
-#    gateway:
+  cloud:
+    gateway:
 #      routes:
 #        - id: first-service
 #          uri: http://localhost:8001/
@@ -29,3 +29,9 @@ spring:
 #            message: Global Filter Default Message
 #            pre: true
 #            post: true
+      default-filters:
+        - name: GlobalFIlter
+          args:
+            message: Global Filter Default Message
+            pre: true
+            post: true
