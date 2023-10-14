@@ -9,6 +9,9 @@ import reactor.core.publisher.Mono;
 
 import java.sql.SQLOutput;
 
+/*
+    커스텀 필터
+ */
 @Component
 public class CustomFilter extends AbstractGatewayFilterFactory<CustomFilter.Config> {
     public CustomFilter(){

@@ -5,21 +5,20 @@ import org.springframework.cloud.gateway.route.builder.RouteLocatorBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+// 기본으로 제공하는 필터 기능 및 라우터 Config 파일로 설정
 @Configuration
 public class FilterConfig {
-//    @Bean
-//    public RouteLocator gatewayRoutes(RouteLocatorBuilder builder){
-//        return builder.routes() // 라이팅 정보 설정 추가 - S
-//                .route(r -> r.path("/first-service/**")
-//                        .filters(f->f.addRequestHeader("fsreqh","fsreqhv")
-//                                .addResponseHeader("fsresph","fsresphv"))
-//                        .uri("http://localhost:8001/")
-//                )// 개별 라우트 정보 설정 추가(1개소)
-//                .route(r -> r.path("/second-service/**")
-//                        .filters(f -> f.addRequestHeader("secreqh","secreqhv")
-//                                .addResponseHeader("secresph","secresphv"))
-//                        .uri("http://localhost:8002/")
-//                )// 개별 라우트 정보 설정 추가(1개소)
-//                .build();// 라이팅 정보 설정 추가 - E
-//    }
+
+    @Bean
+    public RouteLocator gatewayRoutes(RouteLocatorBuilder builder,CustomFilter customFilter){
+        return builder.routes()
+                .route(r-> r.path("/first-service/**")
+                        .filters(f->f.filter(customFilter.apply(new CustomFilter.Config())))
+                        .uri("http://localhost:8001/"))
+                .route(r->r.path("/second-service/**")
+                        .filters(f->f.addRequestHeader("second-req","2")
+                                .addResponseHeader("second-resp","2"))
+                        .uri("http://localhost:8002/"))
+                .build();
+    }
 }
