@@ -8,29 +8,24 @@ spring:
 # 라우터 및 필터 yml 파일로 설정
   cloud:
     gateway:
-#      routes:
-#        - id: first-service
-#          uri: http://localhost:8001/
-#          predicates:
-#            - Path=/first-service/**
-#          filters:
-#            - CustomFilter
+      routes:
+        - id: first-service
+          uri: http://localhost:8001/
+          predicates:
+            - Path=/first-service/**
+          filters:
+            - CustomFilter
+            - LogFilter
 
-#        - id: second-service
-#          uri: http://localhost:8002/
-#          predicates:
-#            - Path=/second-service/**
-#          filters:
-#            - CustomFilter2
+        - id: second-service
+          uri: http://localhost:8002/
+          predicates:
+            - Path=/second-service/**
+          filters:
+            - CustomFilter2
 
-#      default-filters:
-#        - name: GlobalFilter
-#          args:
-#            message: Global Filter Default Message
-#            pre: true
-#            post: true
       default-filters:
-        - name: GlobalFIlter
+        - name: GlobalFilter
           args:
             message: Global Filter Default Message
             pre: true

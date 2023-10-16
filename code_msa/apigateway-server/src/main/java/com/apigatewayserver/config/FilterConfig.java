@@ -9,16 +9,16 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class FilterConfig {
 
-    @Bean
-    public RouteLocator gatewayRoutes(RouteLocatorBuilder builder,CustomFilter3 customFilter3){
-        return builder.routes()
-                .route(r-> r.path("/first-service/**")
-                        .filters(f->f.filter(customFilter3.apply(new CustomFilter3.Config())))
-                        .uri("http://localhost:8001/"))
-                .route(r->r.path("/second-service/**")
-                        .filters(f->f.addRequestHeader("second-req","2")
-                                .addResponseHeader("second-resp","2"))
-                        .uri("http://localhost:8002/"))
-                .build();
-    }
+//    @Bean
+//    public RouteLocator gatewayRoutes(RouteLocatorBuilder builder,CustomFilter3 customFilter3){
+//        return builder.routes()
+//                .route(r-> r.path("/first-service/**")
+//                        .filters(f->f.filter(customFilter3.apply(new CustomFilter3.Config())))
+//                        .uri("http://localhost:8001/"))
+//                .route(r->r.path("/second-service/**")
+//                        .filters(f->f.addRequestHeader("second-req","2")
+//                                .addResponseHeader("second-resp","2"))
+//                        .uri("http://localhost:8002/"))
+//                .build();
+//    }
 }

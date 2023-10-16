@@ -34,3 +34,7 @@
 
 - Day04[[MSA 강의 4일차 - Spring Cloud](https://velog.io/@hyensukim/MSA-4%EC%9D%BC%EC%B0%A8-Chap02.-Spring-Cloud)]
 - Day05[[MSA 강의 5일차 - Spring Cloud](https://velog.io/@hyensukim/MSA-5%EC%9D%BC%EC%B0%A8-Chap02.-Spring-Cloud-Gateway)]
+
+### 3. 디스커버리 서버와 유레카
+
+- Day06[MSA 강의 6일차 - Discovery 및 Eureka]
