@@ -38,8 +38,8 @@ public class RequestCreateUserDto {
                 .email(this.email)
                 .encPw(this.pw)
                 .name(this.name)
-                .uuid(UUID.randomUUID().toString())
                 .userId(this.userId)
+                .uuid(UUID.randomUUID().toString())
                 .createAt(LocalDateTime.now())
                 .build();
     }

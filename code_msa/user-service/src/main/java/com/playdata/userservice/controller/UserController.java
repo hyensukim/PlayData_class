@@ -1,6 +1,7 @@
 package com.playdata.userservice.controller;
 
 import com.playdata.userservice.dto.RequestCreateUserDto;
+import com.playdata.userservice.dto.ResponseFindUserDto;
 import com.playdata.userservice.service.UserService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
@@ -24,7 +25,13 @@ public class UserController {
      */
     @PostMapping("users")
     public ResponseEntity<String> createUser(@Valid @RequestBody RequestCreateUserDto requestCreateUserDto){
-        System.out.println(requestCreateUserDto);
+        userService.createUser(requestCreateUserDto);
         return ResponseEntity.ok("회원 가입 완료!");
+    }
+
+    @GetMapping("users/{uuid}")
+    public ResponseEntity<ResponseFindUserDto> getUser(@PathVariable String uuid){
+        ResponseFindUserDto user = userService.findUserByUuid(uuid);
+        return ResponseEntity.ok(user);
     }
 }
