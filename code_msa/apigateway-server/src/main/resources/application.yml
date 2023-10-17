@@ -24,9 +24,22 @@ spring:
           filters:
             - CustomFilter2
 
+        - id: user-service
+          uri: lb://USER-SERVICE
+          predicates:
+            - Path=/user-service/**
+
       default-filters:
         - name: GlobalFilter
           args:
             message: Global Filter Default Message
             pre: true
             post: true
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://127.0.0.1:8761/eureka # 유레카 서버 주소
+  instance:
+    instance-id: ${spring.client.cloud.hostname}:${spring.application.instance_id:${random.value}}
