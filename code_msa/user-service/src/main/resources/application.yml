@@ -1,0 +1,30 @@
+server:
+  port: 0
+
+spring:
+  profiles:
+    active: db
+  application:
+    name: user-service
+# MySQL 서버 설정
+  datasource:
+    driver-class-name: ${driver-class-name}
+    url: ${url}
+    username: ${username_}
+    password: ${password}
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        format_sql: true
+    show-sql: true
+eureka:
+  client:
+    register-with-eureka: true # 유레카 서버에 등록하기
+    fetch-registry: true # 유레카 서버에서 서버 상태 지속적 감시
+    service-url: 
+      defaultZone: http://127.0.0.1:8761/eureka # 유레카 서버 주소
+  instance:
+    instance-id: ${spring.client.cloud.hostname}:${spring.application.instance_id:${random.value}}
+
