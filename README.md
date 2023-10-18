@@ -37,4 +37,6 @@
 
 ### 3. 디스커버리 서버와 유레카
 
-- Day06[MSA 강의 6일차 - Discovery 및 Eureka]
+- Day06[[MSA 강의 6일차 - Discovery 및 Eureka](https://velog.io/@hyensukim/MSA-6%EC%9D%BC%EC%B0%A8-Chap04.-%EB%94%94%EC%8A%A4%EC%BB%A4%EB%B2%84%EB%A6%AC-%EC%84%9C%EB%B2%84%EC%99%80-%EC%9C%A0%EB%A0%88%EC%B9%B4)]
+- Day07[[MSA 강의 7일차 - 회원가입 및 조회기능 구현](https://velog.io/@hyensukim/MSA-7%EC%9D%BC%EC%B0%A8-Chap04.-%ED%9A%8C%EC%9B%90%EA%B0%80%EC%9E%85-%EB%B0%8F-%EC%A1%B0%ED%9A%8C%EA%B8%B0%EB%8A%A5-%EA%B5%AC%ED%98%84)]
+- Day08[[MSA 강의 8일차 - Spring Security 적용]()]
