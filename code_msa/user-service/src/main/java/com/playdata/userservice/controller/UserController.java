@@ -20,6 +20,11 @@ public class UserController {
         return "server is available";
     }
 
+    @GetMapping("health-check2")
+    public String healthCheck2(){
+        return "server is available2";
+    }
+
     /*
         @RequestBody : JSON 형태로 값을 받아올 때 사용.
      */
