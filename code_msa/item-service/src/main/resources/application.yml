@@ -1,0 +1,30 @@
+server:
+  port: 0
+
+spring:
+  application:
+    name: item-service
+  datasource:
+    driver-class-name: ${driver-class-name}
+    url: ${url}
+    username: ${username_}
+    password: ${password}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+  profiles:
+    active: db
+
+
+eureka:
+  client:
+    fetch-registry: true # 동기적으로 마이크로서비스들과 통신 여부
+    register-with-eureka: true #유레카 서버에 클라이언트 등록 여부
+    service-url:
+      default-zone: http://127.0.0.1:8761/eureka
+  instance:
+    instance-id:${spring.application.name}:${spring.application.instance-id:${random.value}}

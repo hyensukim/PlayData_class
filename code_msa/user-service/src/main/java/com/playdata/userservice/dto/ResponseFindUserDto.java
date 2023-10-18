@@ -1,7 +1,10 @@
 package com.playdata.userservice.dto;
 
+import com.playdata.userservice.domain.Order;
 import com.playdata.userservice.domain.User;
 import lombok.*;
+
+import java.util.List;
 
 @Getter
 @Setter
@@ -15,6 +18,9 @@ public class ResponseFindUserDto {
     private String userId;
     private String email;
     private String name;
+
+    //필요 시 구매내역을 같이 가져올 수 있도록 처리.
+    private List<Order> orderList;
 
     public ResponseFindUserDto(User user){
         this.userId = user.getUserId();

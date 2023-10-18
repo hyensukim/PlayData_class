@@ -30,7 +30,9 @@ public class UserService {
         user = Optional.ofNullable(user).orElseThrow(()->{
             throw new UserNotFoundException();
         });
-        return new ResponseFindUserDto(user);
+        ResponseFindUserDto dto = new ResponseFindUserDto(user);
+        dto.setOrderList(List.of());
+        return dto;
     }
 
     public List<User> findAllUser(){
