@@ -38,3 +38,5 @@ out/
 
 # db 정보 수정
 !**/src/main/resources/application-db.yml
+
+application-db.yml

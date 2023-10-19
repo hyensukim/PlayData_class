@@ -39,5 +39,4 @@ public class ItemController {
         ResponseItemDto dto = itemService.findItemById(uuid);
         return ResponseEntity.status(200).body(dto);
     }
-
 }
