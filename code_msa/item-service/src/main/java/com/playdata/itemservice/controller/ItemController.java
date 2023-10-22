@@ -5,6 +5,7 @@ import com.playdata.itemservice.dto.RequestCreateItemDto;
 import com.playdata.itemservice.dto.ResponseItemDto;
 import com.playdata.itemservice.service.ItemService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.core.env.Environment;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -16,6 +17,7 @@ import java.util.List;
 public class ItemController {
 
     private final ItemService itemService;
+    private final Environment env;
 
     @GetMapping("health-check")
     public String checkHealth(){
@@ -38,5 +40,14 @@ public class ItemController {
     public ResponseEntity<ResponseItemDto> getOne(@PathVariable String uuid){
         ResponseItemDto dto = itemService.findItemById(uuid);
         return ResponseEntity.status(200).body(dto);
+    }
+
+    @GetMapping("profile-check")
+    public String profileCheck(){
+        return "test : ";
+//                env.getProperty("test.value") +
+//                "/" +
+//                "ab : " +
+//                env.getProperty("ab.value");
     }
 }
