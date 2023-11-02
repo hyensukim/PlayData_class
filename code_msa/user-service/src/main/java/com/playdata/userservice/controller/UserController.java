@@ -1,5 +1,6 @@
 package com.playdata.userservice.controller;
 
+import com.playdata.userservice.domain.Order;
 import com.playdata.userservice.domain.User;
 import com.playdata.userservice.dto.RequestCreateUserDto;
 import com.playdata.userservice.dto.ResponseFindUserDto;
@@ -57,5 +58,11 @@ public class UserController {
         return env.getProperty("local.server.port")
                 + "/"
                 + env.getProperty("test/db.value");
+    }
+
+    @GetMapping("users/{userId}/orders")
+    public ResponseEntity<?> findOrdersByUserId(@PathVariable String userId){
+        ResponseFindUserDto user = userService.findUserOrderList(userId);
+        return ResponseEntity.ok(user);
     }
 }

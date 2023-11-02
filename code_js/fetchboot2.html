@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function getData(){
+            fetch("http://localhost:8080/datas") // 비동기식 요청 보내기
+            .then((response)=>response.json()) // 응답온 데이터에서 json 데이터만 추출
+            .then((result) => { // json 데이터 처리
+                for(jsonData of result){
+                    console.log(jsonData.name);
+                    console.log(jsonData.price);
+                    console.log(jsonData.producer);
+                    console.log("--------------");
+                }
+
+                //#person-info 태그 얻어오기
+                const $personInfo = document.getElementById("person-info");
+                let str ='';
+                for(jsonData of result){
+                    str += `<h1>name:${jsonData.name}, price:${jsonData.price}</h1>`;
+                }
+                console.log(str);
+                $personInfo.innerHTML = str;
+            });
+        }
+    </script>
+    <div id="person-info"></div>
+    <button onclick="getData();" id="getData" type="button">데이터 받아오기</button>
+</body>
+</html>

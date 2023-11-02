@@ -4,22 +4,21 @@ server:
 spring:
   application:
     name: item-service
-#  profiles:
-#    active: ab
-#  datasource:
-#    driver-class-name: ${driver-class-name}
-#    url: ${url}
-#    username: ${username_}
-#    password: ${password}
-#  jpa:
-#    hibernate:
-#      ddl-auto: update
-#    show-sql: true
-#    properties:
-#      hibernate:
-#        format_sql: true
-#  profiles:
-#    active: db
+  datasource:
+    driver-class-name: ${driver-class-name}
+    url: ${url}
+    username: ${username_}
+    password: ${password}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+  profiles:
+    active: db
+
 
 eureka:
   client:

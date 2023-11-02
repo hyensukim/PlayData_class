@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // fetch("요청주소")의 결과로 response 가 들어오게 된다
+        // 해당 response에는 header, body가 있다.
+        // 이 중 body에 반환된 json 객체가 있다.
+
+        fetch("http://localhost:8080/persons") // response를 얻어오는 구문
+        .then((resonse) => response.json()) // response에서 json만 추출하는 구문
+        .then((result) => console.log(result)); // 추출된 json을 활용하는 구문
+    </script>
+    <button id="getPersonList">데이터 가져오기</button>
+</body>
+</html>

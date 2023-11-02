@@ -2,6 +2,7 @@ package com.playdata.itemservice.controller;
 
 import com.playdata.itemservice.domain.Item;
 import com.playdata.itemservice.dto.RequestCreateItemDto;
+import com.playdata.itemservice.dto.ResponseFeignItemDto;
 import com.playdata.itemservice.dto.ResponseItemDto;
 import com.playdata.itemservice.service.ItemService;
 import lombok.RequiredArgsConstructor;
@@ -40,6 +41,12 @@ public class ItemController {
     public ResponseEntity<ResponseItemDto> getOne(@PathVariable String uuid){
         ResponseItemDto dto = itemService.findItemById(uuid);
         return ResponseEntity.status(200).body(dto);
+    }
+
+    @GetMapping("items/{productId}/orders")
+    public ResponseEntity<?> findOrderListByProductId(@PathVariable String productId){
+        ResponseFeignItemDto item = itemService.findItemOrderList(productId);
+        return ResponseEntity.status(200).body(item);
     }
 
     @GetMapping("profile-check")

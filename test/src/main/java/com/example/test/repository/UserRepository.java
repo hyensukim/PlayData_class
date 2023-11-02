@@ -1,8 +1,13 @@
-package com.example.test.entitiy;
+package com.example.test.repository;
+
+import com.example.test.entitiy.User;
+
+import java.util.List;
 
 public interface UserRepository {
 
-    void signUp();
-    
-    void login(String id, String );
+    public List<User> getAllUser();
+
+    public User getUserByUserId(int userId);
+
 }

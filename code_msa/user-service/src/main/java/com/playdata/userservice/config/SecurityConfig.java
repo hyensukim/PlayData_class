@@ -14,7 +14,7 @@ public class SecurityConfig {
         http
             .csrf(csrf -> csrf.disable())
             .authorizeHttpRequests(authorize -> authorize
-                    .requestMatchers("/user-service/health-check2").permitAll()
+                    .requestMatchers("/user-service/health-check2").authenticated()
                     .anyRequest().permitAll()
             )
             .formLogin(formLogin -> formLogin
