@@ -1,10 +1,13 @@
 package com.playdata.itemservice.controller;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.playdata.itemservice.domain.Item;
 import com.playdata.itemservice.dto.RequestCreateItemDto;
 import com.playdata.itemservice.dto.ResponseFeignItemDto;
 import com.playdata.itemservice.dto.ResponseItemDto;
 import com.playdata.itemservice.service.ItemService;
+import com.playdata.itemservice.util.FeignException;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.core.env.Environment;
 import org.springframework.http.ResponseEntity;
@@ -26,9 +29,11 @@ public class ItemController {
     }
 
     @PostMapping("items")
-    public ResponseEntity<String> registerItem(@RequestBody RequestCreateItemDto dto){
-        itemService.createItem(dto);
-        return ResponseEntity.status(201).body("아이템 등록에 성공했습니다.");
+    public ResponseEntity<String> registerItem(@Valid @RequestBody RequestCreateItemDto dto)
+    throws JsonProcessingException {
+        itemService.publishCreateItemMessage(dto);
+//        itemService.createItem(dto);
+        return ResponseEntity.status(200).body("메시지 큐에 생성 요청 적재 완료.");
     }
 
     @GetMapping("items/all")
@@ -48,6 +53,16 @@ public class ItemController {
         ResponseFeignItemDto item = itemService.findItemOrderList(productId);
         return ResponseEntity.status(200).body(item);
     }
+
+    /*
+        PathVariable 이용해서 message를 큐에 적재할 수 있도록 엔드포인트 직접 설정.
+     */
+    @GetMapping("items/{message}/message")
+    public ResponseEntity<?> publishMessage(@PathVariable String message){
+        itemService.publishTestMessage(message);
+        return ResponseEntity.ok("메시지 전송 성공!");
+    }
+
 
     @GetMapping("profile-check")
     public String profileCheck(){
