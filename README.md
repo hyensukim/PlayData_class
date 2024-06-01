@@ -42,5 +42,3 @@
 - Day08[[MSA 강의 8일차 - Spring Security 적용+ 마이크로 서비스 개별 구현]()]
 - Day09[MSA 강의 9일차 - Git-flow]
 - Day10[MSA 강의 10일차 - spring-cloud-config]
-
-### 4. Config 서버를 활용한 연동
