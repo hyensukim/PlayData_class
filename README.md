@@ -40,5 +40,9 @@
 - Day06[[MSA 강의 6일차 - Discovery 및 Eureka](https://velog.io/@hyensukim/MSA-6%EC%9D%BC%EC%B0%A8-Chap04.-%EB%94%94%EC%8A%A4%EC%BB%A4%EB%B2%84%EB%A6%AC-%EC%84%9C%EB%B2%84%EC%99%80-%EC%9C%A0%EB%A0%88%EC%B9%B4)]
 - Day07[[MSA 강의 7일차 - 회원가입 및 조회기능 구현](https://velog.io/@hyensukim/MSA-7%EC%9D%BC%EC%B0%A8-Chap04.-%ED%9A%8C%EC%9B%90%EA%B0%80%EC%9E%85-%EB%B0%8F-%EC%A1%B0%ED%9A%8C%EA%B8%B0%EB%8A%A5-%EA%B5%AC%ED%98%84)]
 - Day08[[MSA 강의 8일차 - Spring Security 적용+ 마이크로 서비스 개별 구현]()]
-- Day09[MSA 강의 9일차 - Git-flow]
-- Day10[MSA 강의 10일차 - spring-cloud-config]
+- Day09[MSA 강의 9일차 - Git-flow](https://velog.io/@hyensukim/Git-Flow-%EC%9D%B4%ED%95%B4-%EB%B0%8F-%EC%8B%A4%EC%8A%B5)
+- Day10[MSA 강의 10일차 - spring-cloud-config](https://velog.io/@hyensukim/MSA-10%EC%9D%BC%EC%B0%A8-Spring-Cloud-Config)
+
+## 4. 서비스간 통신
+- Day11[MSA 강의 11일차 - Open-Feign](https://velog.io/@hyensukim/MSA-Feign-Client)
+- Day12[MSA 강의 12일차 - 메시지](https://velog.io/@hyensukim/MSA-%EB%A9%94%EC%8B%9C%EC%A7%80%ED%81%90)
